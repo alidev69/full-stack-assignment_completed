@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Fetch Homework</title>
+</head>
+
+<body></body>
+
+</html>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    fetchRecords();
+});
+    function fetchRecords() {
+        fetch('http://localhost:3000/records?limit=10&offset=0&color[]=brown&color[]=green')
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error))
+    }
+</script>
